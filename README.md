@@ -2,6 +2,7 @@
 This repository provides supplemental Code for a research paper on the Game of Cycles that is currently in process. Using an inputted legal board, the program analyzes every possible outcome of the game and outputs a guaranteed winning strategy for either player 1 or player 2. Note that this repository is currently in its initial stages, so feel free to reach out if you have any questions as we refine the descriptions and write the research paper.
 
 Constructing a Game Table:
+-------------------------
 As described, the program requires the user to input a legal game board. We developed a tabular representation of a planar graph called a game table that maintains an isomorphism of faces. Given a board in the Game of Cycles, we construct an m x n game table as follows:
 - Assign a unique number to every vertex in the board
 - Assign an indexed variable $f_1,f_2,\cdots,f_n$ to every face in the board, assigning a variable to the infinite (outer) face last
@@ -14,8 +15,6 @@ After the board is constructed, a game can then be played by marking non-zero en
 
 Because a given edge borders two faces, entries must be marked in pairs. Directed edges always run clockwise to one face and counterclockwise to the other, so when an edge is marked with respect to one face, then it must be marked in the opposite direction with respect to the other face. The paired entry is determined by examining the row of the entry vertex and finding the entry that matches the previous row vertex.
 
-%The paired entries representing an edge can be determined using the vertices adjacent to the edge. In the row of one vertex, find the other vertex in an entry and add a sign. Then examine the row of the other vertex and find the first vertex entry, adding the opposite sign to the entry.
-
 Since a row represents the edges adjacent to a vertex, all of the edges in a row cannot be marked in the same direction with respect to the vertex, meaning that they cannot all be directed towards or away from the vertex. In the context of the game table, this means that all non-zero values in a given row cannot be positive or negative. To answer the previous question on the infinite face inclusion, the removal of the entries would result in a missing edge around a vertex, changing the conditions for near-sinks and near-sources.
 
 Since a column represents the edges around a face, a cycle is formed when all of the edges in a column are marked in the same direction, except for the last column representing the infinite face. In other words, all of the non-zero values in a column are given the same sign. As described above, positive signs represent clockwise cycles and negative signs represent counterclockwise cycles.
@@ -23,6 +22,7 @@ Since a column represents the edges around a face, a cycle is formed when all of
 In the context of a game table, a Game of Cycles ends when all entries in a column are marked with the same sign (the creation of a cycle) or marking any pair of entries produces a row where all of the edges are marked with the same sign (only unmarkable edges left).
 
 A brief outline of the program:
+------------------------------
 The algorithm builds a labeled directed graph of all possible boards using the following method:
 - Using an inputted game table, determine sets of moves that create sinks/sources or cycles
 - Generate all possible boards and remove boards with sets of moves that create sinks/sources 
