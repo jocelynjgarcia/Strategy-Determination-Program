@@ -38,3 +38,11 @@ When the program has finished running, the output will consist of the first move
 The creation of this ordered mapping allows a list that is the length of the mapping filled with 0, 1, or -1 to represent a board where entries 1,2,3,... of the list are matched with key-value pairs 1,2,3,... of the mapping. We establish this representation by stating that a zero represents and unmarked edge at the matching mapping edge, a 1 represents directed edge in the matched edge of the mapping marked in the positive direction of the key and the negative direction of the value. The opposite of the 1 and -1 is true for the reverseMapping, which we create so that a program does not need to check the value of every key in the mapping dictionary and instead look for the key in a reversed dictionary.
 
 Because of this mapping, the edges of the directed graph from a given vertex must be found using the list of moves that represents the current game state. The final chunk of code in the repository allows the user to input a specific game state list and outputs the possible moves and their type. The game state is inputted by changing the value tuple(emptyBoard) to the tuple of the game state. Inputting the empty board demonstrates the possible first moves of the game. According to impartial game strategy, the player 1 has a guaranteed winning strategy if they can make a move to a p-position, otherwise player 2 has a guaranteed winning strategy.
+
+Versions:
+---------------
+python: 3.9.7
+more-itertools: 8.10.0
+networkx: 2.6.3
+matplotlib: 3.4.3
+matplotlib-inline: 0.1.2
