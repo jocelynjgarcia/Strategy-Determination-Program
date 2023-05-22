@@ -42,7 +42,11 @@ Because of this mapping, the edges of the directed graph from a given vertex mus
 Versions:
 ---------------
 python: 3.9.7
+
 more-itertools: 8.10.0
+
 networkx: 2.6.3
+
 matplotlib: 3.4.3
+
 matplotlib-inline: 0.1.2
