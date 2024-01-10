@@ -1,5 +1,5 @@
 # Strategy-Determination-Program
-This repository provides supplemental code for the attached preprint titled _A Computational Solution to the Game of Cycles_. Using a tabular representation of a game board, the program analyzes every possible outcome of the game and outputs a guaranteed winning strategy for either player 1 or player 2.
+This repository provides supplemental code for the attached preprint titled _A Computational Solution to the Game of Cycles_, which has been accepted for publication in _Involve, a Journal of Mathematics_. Using a tabular representation of a game board, the program analyzes every possible outcome of the game and outputs a guaranteed winning strategy for either player 1 or player 2.
 
 We now detail necessary concepts for designing program inputs and interpreting the output. Note that the attached preprint can be consulted for a theoretical basis of the proposed methods, and we welcome questions about methods and applications if they arise.
 
